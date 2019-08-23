@@ -1,0 +1,28 @@
+.container .current_month {
+    font-size: 1.7rem;
+}
+
+.entries .list-group .description {
+    flex-basis: 70%;
+}
+
+.entries .list-group .remove {
+    color: rgba(255, 0, 0, 0.705);
+    font-size: 25px;
+    transition: transform 0.5s;
+    cursor: pointer;
+}
+
+.entries .list-group .remove:hover {
+    transform: scale(1.5);
+}
+
+@media (max-width: 600px) {
+    .container .divider {
+        border-bottom: 1px solid #cec7c7;
+    }
+
+    .entries .list-group .description {
+        flex-basis: 100%;
+    }
+}
