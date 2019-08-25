@@ -14,7 +14,8 @@
 }
 
 .entries .list-group .remove:hover {
-    transform: scale(1.5);
+    color: red;
+    transform: scale(1.2);
 }
 
 @media (max-width: 600px) {

@@ -40,11 +40,11 @@
                 <p class="text-center font-weight-bold text-uppercase text-primary mb-4">
                     Add Income / Expenses
                 </p>
-                <form class="needs-validation" novalidate>
+                <form class="needs-validation" novalidate id="addEntry">
                     <div class="form-row text-dark">
                         <div class="col-6">
-                            <label for="inputState">Type</label>
-                            <select id="inputState" class="form-control" required>
+                            <label for="type">Type</label>
+                            <select id="type" class="form-control" required>
                                 <option value="inc" selected>Income</option>
                                 <option value="exp">Expense</option>
                             </select>
@@ -71,72 +71,32 @@
                 </form>
             </div>
         </div>
-        <div class="row entries bg-light border rounded mx-0 mt-3">
+        <div class="row entries bg-light mx-0 mt-3">
             <div class="col-md-6 py-4 divider">
                 <p class="text-center text-success text-uppercase font-weight-bold">Income</p>
-                <ul class="list-group">
-                    <li
-                        class="list-group-item list-group-item-success d-flex flex-wrap justify-content-between align-items-center">
+                <ul class="list-group" id="inc-container">
+                    <!-- <li class="list-group-item list-group-item-success d-flex flex-wrap justify-content-between align-items-center"
+                        id="inc-1">
                         <p class="description mb-0">
                             Lorem ipsum dolor sit amet consectetur.
                         </p>
-                        <span class="amount text-center">+ 50000
-                        </span>
+                        <span class="amount text-center">+ 50000</span>
                         <span class="remove text-center">&times;</span>
-                    </li>
-                    <li
-                        class="list-group-item list-group-item-success d-flex flex-wrap justify-content-between align-items-center">
-                        <p class="description mb-0">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <span class="amount text-center">+ 50000
-                        </span>
-                        <span class="remove text-center">&times;</span>
-                    </li>
-                    <li
-                        class="list-group-item list-group-item-success d-flex flex-wrap justify-content-between align-items-center">
-                        <p class="description mb-0">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <span class="amount text-center">+ 50000
-                        </span>
-                        <span class="remove text-center">&times;</span>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
             <div class="col-md-6 py-4">
                 <p class="text-center text-danger text-uppercase font-weight-bold">Expenses</p>
-                <ul class="list-group">
-                    <li
-                        class="list-group-item list-group-item-danger d-flex flex-wrap justify-content-between align-items-center">
+                <ul class="list-group" id="exp-container">
+                    <!-- <li class="list-group-item list-group-item-danger d-flex flex-wrap justify-content-between align-items-center"
+                        id="exp-1">
                         <p class="description mb-0">
                             Lorem ipsum dolor sit amet consectetur.
                         </p>
-                        <span class="amount text-center">- 50000
-                        </span>
+                        <span class="amount text-center">- 50000</span>
                         <span class="badge bg-light text-danger mx-2">17%</span>
                         <span class="remove text-center">&times;</span>
-                    </li>
-                    <li
-                        class="list-group-item list-group-item-danger d-flex flex-wrap justify-content-between align-items-center">
-                        <p class="description mb-0">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <span class="amount text-center">- 50000
-                        </span>
-                        <span class="badge bg-light text-danger mx-2">17%</span>
-                        <span class="remove text-center">&times;</span>
-                    </li>
-                    <li
-                        class="list-group-item list-group-item-danger d-flex flex-wrap justify-content-between align-items-center">
-                        <p class="description mb-0">
-                            Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <span class="amount text-center">- 50000
-                        </span>
-                        <span class="badge bg-light text-danger mx-2">17%</span>
-                        <span class="remove text-center">&times;</span>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
 
@@ -153,26 +113,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script>
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function () {
-            'use strict';
-            window.addEventListener('load', function () {
-                // Fetch all the forms we want to apply custom Bootstrap validation styles to
-                var forms = document.getElementsByClassName('needs-validation');
-                // Loop over them and prevent submission
-                var validation = Array.prototype.filter.call(forms, function (form) {
-                    form.addEventListener('submit', function (event) {
-                        if (form.checkValidity() === false) {
-                            event.preventDefault();
-                            event.stopPropagation();
-                        }
-                        form.classList.add('was-validated');
-                    }, false);
-                });
-            }, false);
-        })();
-    </script>
+    <script src="app.js"></script>
 </body>
 
 </html>
