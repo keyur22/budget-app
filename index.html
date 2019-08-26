@@ -20,82 +20,79 @@
             The Budget App
         </h2>
         <div class="row bg-light border rounded m-0">
-            <div class="col-md-6 text-center divider py-4">
+            <div class="col-md-6 text-center divider py-4 budget-section">
                 <p class="mb-0">Your Budget for</p>
-                <p class="text-primary text-uppercase font-weight-bold current_month">August 2019</p>
-                <p class="price display-4 text-danger">6.500</p>
+                <p class="text-primary text-uppercase font-weight-bold current-month"></p>
+                <h1 class="total-budget text-danger font-weight-bold">0</h1>
                 <div
                     class="income bg-success mx-auto text-light px-3 py-2 d-flex justify-content-between text-uppercase border rounded shadow amounts">
                     <span>Income</span>
-                    <span class="font-weight-bold">1000</span>
+                    <span class="font-weight-bold total-inc">0</span>
                 </div>
                 <div
                     class="expense bg-danger mx-auto text-light mt-3 px-3 py-2  d-flex justify-content-between text-uppercase align-items-center border rounded shadow amounts">
                     <span>Expenses</span>
-                    <span class="badge bg-light text-danger">17%</span>
-                    <span class="font-weight-bold">2000</span>
+                    <span class="badge bg-light text-danger percent">---</span>
+                    <span class="font-weight-bold total-exp">0</span>
                 </div>
             </div>
             <div class="col-md-6 py-4">
                 <p class="text-center font-weight-bold text-uppercase text-primary mb-4">
                     Add Income / Expenses
                 </p>
-                <form class="needs-validation" novalidate id="addEntry">
+                <form id="addEntry">
                     <div class="form-row text-dark">
                         <div class="col-6">
                             <label for="type">Type</label>
                             <select id="type" class="form-control" required>
-                                <option value="inc" selected>Income</option>
+                                <option value="" selected>Choose type</option>
+                                <option value="inc">Income</option>
                                 <option value="exp">Expense</option>
                             </select>
-                            <div class="invalid-feedback">
-                                Please choose the amount type.
-                            </div>
                         </div>
                         <div class="form-group col-6">
                             <label for="amount">Amount (in Rs.)</label>
                             <input type="number" class="form-control" id="amount" required>
-                            <div class="invalid-feedback">
-                                Please enter an amount.
-                            </div>
                         </div>
                         <div class="form-group col-12">
                             <label for="description">Description</label>
                             <input type="text" class="form-control" id="description" required>
-                            <div class="invalid-feedback">
-                                Please enter the amount description.
-                            </div>
                         </div>
                     </div>
                     <button type="submit" class="btn btn-sm btn-primary d-block mx-auto text-uppercase">Add</button>
                 </form>
             </div>
         </div>
-        <div class="row entries bg-light mx-0 mt-3">
-            <div class="col-md-6 py-4 divider">
+        <div class="row entries bg-light mx-0 mt-3 border rounded">
+            <div class="col-md-6 py-4 divider entries-container">
                 <p class="text-center text-success text-uppercase font-weight-bold">Income</p>
+                <p class="text-center mb-0 mt-4" id="inc-empty">No incomes added</p>
                 <ul class="list-group" id="inc-container">
                     <!-- <li class="list-group-item list-group-item-success d-flex flex-wrap justify-content-between align-items-center"
                         id="inc-1">
                         <p class="description mb-0">
                             Lorem ipsum dolor sit amet consectetur.
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam itaque esse deserunt
+                            temporibus vero! Sapiente corrupti fuga quia excepturi architecto!
                         </p>
-                        <span class="amount text-center">+ 50000</span>
-                        <span class="remove text-center">&times;</span>
+                        <span class="amount text-left text-lg-center">+ 50000</span>
+                        <span class="remove text-right">&times;</span>
                     </li> -->
                 </ul>
             </div>
-            <div class="col-md-6 py-4">
+            <div class="col-md-6 py-4 entries-container">
                 <p class="text-center text-danger text-uppercase font-weight-bold">Expenses</p>
+                <p class="text-center mb-0 mt-4" id="exp-empty">No expenses added</p>
                 <ul class="list-group" id="exp-container">
                     <!-- <li class="list-group-item list-group-item-danger d-flex flex-wrap justify-content-between align-items-center"
                         id="exp-1">
                         <p class="description mb-0">
                             Lorem ipsum dolor sit amet consectetur.
-                        </p>
-                        <span class="amount text-center">- 50000</span>
-                        <span class="badge bg-light text-danger mx-2">17%</span>
-                        <span class="remove text-center">&times;</span>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quibusdam itaque esse deserunt
+                            temporibus vero! Sapiente corrupti fuga quia excepturi architecto! </p>
+                        <span class="amount text-left text-lg-center">- 50000</span>
+                        <span class="badge bg-light text-danger">17%</span>
+                        <span class="remove text-right">&times;</span>
                     </li> -->
                 </ul>
             </div>

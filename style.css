@@ -2,20 +2,54 @@
     font-size: 1.7rem;
 }
 
-.entries .list-group .description {
-    flex-basis: 70%;
+.entries #inc-container .description {
+    flex-basis: 50%;
+}
+
+.entries #exp-container .description {
+    flex-basis: 50%;
+}
+
+.entries .amount {
+    flex-basis: 30%;
+}
+
+.entries .remove {
+    flex-basis: 5%;
 }
 
 .entries .list-group .remove {
-    color: rgba(255, 0, 0, 0.705);
+    color: rgba(44, 17, 17, 0.705);
     font-size: 25px;
     transition: transform 0.5s;
     cursor: pointer;
 }
 
-.entries .list-group .remove:hover {
+entries-container .entries .list-group .remove:hover {
     color: red;
     transform: scale(1.2);
+}
+
+@media (max-width: 995px) {
+
+    .entries #inc-container .description,
+    .entries #exp-container .description {
+        flex-basis: 100%;
+    }
+
+    .entries .amount {
+        flex-basis: 50%;
+    }
+
+    .entries .badge {
+        flex-basis: auto;
+    }
+
+    .entries .amount,
+    .entries .remove,
+    .entries .badge {
+        margin-top: 10px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -25,5 +59,9 @@
 
     .entries .list-group .description {
         flex-basis: 100%;
+    }
+
+    .budget-section h1 {
+        overflow-x: scroll;
     }
 }
